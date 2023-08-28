@@ -2,11 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition-duration: 300ms;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.regenerateTop, .copyTop {
+    position: fixed;
+    bottom: 20px;
+    padding: 5px 20px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.copyTop {
+    bottom: 60px;
+}
+
+.regenerateTop:hover {
+    cursor: pointer;
+    background: black;
+    color: white;
 }
 
 body {

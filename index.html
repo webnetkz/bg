@@ -25,5 +25,31 @@
         <button class="download">Copy SVG</button>
         <button class="regenerate">Regenerate</button>
       </div>
+
+      <span class="regenerateTop" onclick="reloadPage();">Regenerate</span>
+      <span class="copyTop" onclick="copySVG();">Copy IMG</span>
+
+
+
+      <script>
+        
+        function reloadPage() {
+            location.reload();
+        }
+
+        function copySVG() {
+            function copyTextToClipboardUsingAPI(text) {
+                navigator.clipboard.writeText(text)
+                    .then(() => {
+                        console.log("Текст скопирован в буфер обмена");
+                    })
+                    .catch(err => {
+                        console.error("Ошибка при копировании текста: ", err);
+                    });
+            }
+            copyTextToClipboardUsingAPI(document.querySelector('.canvas-wrapper').innerHTML);
+        }
+
+      </script>
 </body>
 </html>
