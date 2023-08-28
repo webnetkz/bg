@@ -1,5 +1,3 @@
-console.clear();
-
 import { SVG } from "https://cdn.skypack.dev/@svgdotjs/svg.js";
 import {
   random,
@@ -101,7 +99,7 @@ downloadBtn.addEventListener("click", () => {
 gsap.fromTo(
   ".controls",
   {
-    opacity: 1,
+    opacity: 0,
     y: 24
   },
   {
@@ -115,7 +113,7 @@ gsap.fromTo(
 gsap.fromTo(
   "button",
   {
-    opacity: 1,
+    opacity: 0,
     y: 12
   },
   {
@@ -130,7 +128,7 @@ gsap.fromTo(
 gsap.fromTo(
   "p",
   {
-    opacity: 1,
+    opacity: 0,
     y: 12
   },
   {

@@ -20,10 +20,17 @@
     <div class="canvas-wrapper">
         <svg class="canvas" viewBox="0 0 1920 1080" preserveAspectRatio="xMaxYMid slice"></svg>
       </div>
-      <div class="controls">
+      <div class="controls" style="opacity: 1;">
         <p>* Export is disabled for mobile devices</p>
-        <button class="download">Copy SVG</button>
-        <button class="regenerate">Regenerate</button>
+        <button class="download" style="opacity: 1;">Copy SVG</button>
+        <button class="regenerate" style="opacity: 1;">Regenerate</button>
       </div>
 </body>
 </html>
+
+<script>
+    setTimeout(() => {
+        document.querySelector('.controls').style.opacity = 1;
+        document.querySelector('.regenerate').style.opacity = 1;
+    }, 2000);
+</script>
