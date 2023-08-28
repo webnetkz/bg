@@ -1,5 +1,3 @@
-console.clear();
-
 import { SVG } from "https://cdn.skypack.dev/@svgdotjs/svg.js";
 import {
   random,
