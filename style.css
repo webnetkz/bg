@@ -48,7 +48,7 @@ body {
   backdrop-filter: blur(12px);
   border-radius: 0.5rem;
   border: 1px solid hsla(0, 0%, 100%, 0.25);
-  opacity: 0;
+  opacity: 1;
 }
 
 .controls p {

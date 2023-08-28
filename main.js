@@ -101,7 +101,7 @@ downloadBtn.addEventListener("click", () => {
 gsap.fromTo(
   ".controls",
   {
-    opacity: 0,
+    opacity: 1,
     y: 24
   },
   {
@@ -115,7 +115,7 @@ gsap.fromTo(
 gsap.fromTo(
   "button",
   {
-    opacity: 0,
+    opacity: 1,
     y: 12
   },
   {
@@ -130,7 +130,7 @@ gsap.fromTo(
 gsap.fromTo(
   "p",
   {
-    opacity: 0,
+    opacity: 1,
     y: 12
   },
   {
