@@ -20,14 +20,15 @@
     <div class="canvas-wrapper">
         <svg class="canvas" viewBox="0 0 1920 1080" preserveAspectRatio="xMaxYMid slice"></svg>
       </div>
-      <div class="controls" style="opacity: 1;">
+      <!-- <div class="controls" style="opacity: 1;">
         <p>* Export is disabled for mobile devices</p>
         <button class="download" style="opacity: 1;">Copy SVG</button>
         <button class="regenerate" style="opacity: 1;">Regenerate</button>
-      </div>
+      </div> -->
 
       <span class="regenerateTop" onclick="reloadPage();">Regenerate</span>
       <span class="copyTop" onclick="copySVG();">Copy IMG</span>
+      <span class="appendAnimation" onclick="animationSVG();">Append animation</span>
 
 
 
@@ -48,6 +49,60 @@
                     });
             }
             copyTextToClipboardUsingAPI(document.querySelector('.canvas-wrapper').innerHTML);
+        }
+
+        function animationSVG() {
+            document.querySelector('svg.canvas').innerHTML += `
+            <style>
+                .canvas path:nth-child(1) {
+                animation: waveAnimation 6s linear infinite;
+                }
+
+                .canvas path:nth-child(2) {
+                animation: waveAnimation 4s linear infinite;
+                }
+
+                .canvas path:nth-child(3) {
+                animation: waveAnimation 5s linear infinite;
+                }
+
+                .canvas path:nth-child(4) {
+                animation: waveAnimation 7s linear infinite;
+                }
+
+                .canvas path:nth-child(5) {
+                animation: waveAnimation 3s linear infinite;
+                }
+
+                .canvas path:nth-child(6) {
+                animation: waveAnimation 5s linear infinite;
+                }
+
+                .canvas path:nth-child(7) {
+                animation: waveAnimation 5s linear infinite;
+                }
+
+                .canvas path:nth-child(8) {
+                animation: waveAnimation 5s linear infinite;
+                }
+
+                .canvas path:nth-child(9) {
+                animation: waveAnimation 7s linear infinite;
+                }
+
+                @keyframes waveAnimation {
+                0%, 100% {
+                    transform: translateY(0) translateX(0);
+                }
+                50% {
+                    transform: translateY(20px) translateX(40px);
+                }
+                100% {
+                    transform: translateY(0) translateX(0);
+                }
+                }
+            </style>
+            `;
         }
 
       </script>

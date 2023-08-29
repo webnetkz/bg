@@ -10,7 +10,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.regenerateTop, .copyTop {
+.regenerateTop, .copyTop, .appendAnimation {
     position: fixed;
     bottom: 20px;
     padding: 5px 20px;
@@ -22,7 +22,11 @@ html {
     bottom: 60px;
 }
 
-.regenerateTop:hover {
+.appendAnimation {
+  bottom: 100px;
+}
+
+.regenerateTop:hover, .copyTop:hover, .appendAnimation:hover {
     cursor: pointer;
     background: black;
     color: white;
