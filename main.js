@@ -11,7 +11,10 @@ import copy from "https://cdn.skypack.dev/copy-to-clipboard@3.3.1";
 import { gsap } from "https://cdn.skypack.dev/gsap@3.6.0";
 
 const svg = SVG(".canvas");
-const { width, height } = svg.viewbox();
+let { width, height } = svg.viewbox();
+width = width + 100;
+height = height + 100;
+
 
 const regenerateBtn = document.querySelector(".regenerate");
 const downloadBtn = document.querySelector(".download");
